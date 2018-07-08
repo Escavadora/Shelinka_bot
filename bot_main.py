@@ -1,4 +1,6 @@
 # https://github.com/Escavadora/Shelinka_bot
+# TODO regex for FAQ
+# TODO purge command only available to admins
 
 import discord
 
