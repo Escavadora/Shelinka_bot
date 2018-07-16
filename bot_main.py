@@ -1,6 +1,5 @@
 # https://github.com/Escavadora/Shelinka_bot
 # TODO regex for FAQ
-# TODO purge command only available to admins
 
 import discord
 
@@ -15,10 +14,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!hello'):
-        msg = 'Hey there {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-
     if message.content.startswith('!faq'):
         msg = 'Hey there :wave: , please read #roles and #faq , you will find almost everything there. If you have any other questions feel free to ask :CuteBirb: '.format(message)
         await client.send_message(message.channel, msg)
@@ -28,10 +23,6 @@ async def on_message(message):
             msg = 'https://i.imgur.com/Q4PtRPr.jpg'.format(message)
             await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!athena'):
-        if message.author.id == ('210113891248766976'):
-            msg = 'https://i.imgur.com/O6lkJZH.png'.format(message)
-            await client.send_message(message.channel, msg)
 
 @client.event
 async def on_ready():
