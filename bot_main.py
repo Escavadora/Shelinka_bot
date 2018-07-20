@@ -30,6 +30,6 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence(game=discord.Game(name='Sending nudes to Treebo'))
+    await client.change_presence(game=discord.Game(name='Unicorn Petting Zoo 2019'))
 
 client.run(TOKEN)
