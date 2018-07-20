@@ -2,6 +2,7 @@
 # TODO regex for FAQ
 
 import discord
+from discord.utils import get
 
 tokenFile = open('token.txt', 'r')
 TOKEN = tokenFile.read()
@@ -22,6 +23,13 @@ async def on_message(message):
         if message.author.id == ('204287692542836736'):
             msg = 'https://i.imgur.com/Q4PtRPr.jpg'.format(message)
             await client.send_message(message.channel, msg)
+
+    if message.content.startswith(''):
+        if message.channel == client.get_channel('468781121497333762'):
+            emoji1 = get(client.get_all_emojis(), name='Ready')
+            emoji2 = get(client.get_all_emojis(), name='NotReady')
+            await client.add_reaction(message, emoji1)
+            await client.add_reaction(message, emoji2)
 
 
 @client.event
