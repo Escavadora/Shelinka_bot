@@ -16,7 +16,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('!faq'):
-        msg = 'Hey there :wave: , please read #roles and #faq , you will find almost everything there. If you have any other questions feel free to ask :CuteBirb: '.format(message)
+        msg = 'Hey there :wave: , please read #roles and #faq , you will find almost everything there. If you have any other questions feel free to ask <:CuteBirb:454812443752005632> '.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!shelinka'):
