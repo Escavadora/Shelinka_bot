@@ -4,7 +4,12 @@
 import discord
 from discord.utils import get
 
-tokenFile = open('token.txt', 'r')
+# uncomment this for bot in FriendshipBirb discord
+# tokenFile = open('token.txt', 'r')
+
+# uncomment this for testing purposes
+tokenFile = open('token2.txt', 'r')
+
 TOKEN = tokenFile.read()
 
 client = discord.Client()
