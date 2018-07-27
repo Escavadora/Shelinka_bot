@@ -15,6 +15,7 @@ import discord
 tokenFile = open('token2.txt', 'r')
 
 BOT_PREFIX = ('!', '?')
+
 TOKEN = tokenFile.read()
 client = Bot(command_prefix=BOT_PREFIX)
 
