@@ -9,10 +9,10 @@ import datetime
 import discord
 
 # Comment this line if you want to test
-# tokenFile = open('token.txt', 'r')
+tokenFile = open('token.txt', 'r')
 
 # Comment this line if you want to deploy
-tokenFile = open('token2.txt', 'r')
+# tokenFile = open('token2.txt', 'r')
 
 BOT_PREFIX = ('!', '?')
 
