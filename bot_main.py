@@ -25,13 +25,13 @@ async def on_ready():
     print('------')
 
 
-@client.listen()
-async def reactMessage(message):
-    if message.channel == client.get_channel('468781121497333762'):
+@client.event
+async def on_message(message):
+    if message.channel.id == '468781121497333762':
         emoji1 = get(client.get_all_emojis(), name='Ready')
         emoji2 = get(client.get_all_emojis(), name='NotReady')
-        await message.add_reaction(emoji1)
-        await message.add_reaction(emoji2)
+        await client.add_reaction(message, emoji1)
+        await client.add_reaction(message, emoji2)
 
 
 @client.command(description='Posts response leading people to #faq and #roles')
@@ -47,7 +47,6 @@ async def faq():
                 pass_context=True)
 async def shelinka(ctx):
     if ctx.message.author.id != '204287692542836736':
-        await client.say('Nice try bitch')
         return
     else:
         msg = 'https://i.imgur.com/Q4PtRPr.jpg'
